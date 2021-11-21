@@ -1,2 +1,2 @@
-# UnitTestWithMoq
-Unit tests for the 6th Mpp lab using stub objects.
+#### Задание:
+	Необходимо протестировать одну из лабораторных работ по предмету 	СПП.Использовать `UnitTests` с заглушками, т.е. `moq-object`. Сделать как минимум 7 тестов.

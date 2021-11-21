@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingMPPLab3", "TestingMPPLab3\TestingMPPLab3.csproj", "{F5AD0E84-0412-4597-B449-C2975DAE600E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPP_Lab_5", "..\MPP_Labs\MPP_Lab_5\MPP_Lab_5\MPP_Lab_5.csproj", "{BD02991E-1459-4AFB-8F7E-8BE38088E5DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5AD0E84-0412-4597-B449-C2975DAE600E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5AD0E84-0412-4597-B449-C2975DAE600E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5AD0E84-0412-4597-B449-C2975DAE600E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5AD0E84-0412-4597-B449-C2975DAE600E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD02991E-1459-4AFB-8F7E-8BE38088E5DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD02991E-1459-4AFB-8F7E-8BE38088E5DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD02991E-1459-4AFB-8F7E-8BE38088E5DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD02991E-1459-4AFB-8F7E-8BE38088E5DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A69859F3-4E20-48A9-8BF0-323738AA0867}
+	EndGlobalSection
+EndGlobal
