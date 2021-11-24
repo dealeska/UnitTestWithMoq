@@ -4,22 +4,22 @@ using System.Collections.Generic;
 
 namespace TestingMPPLab3
 {
-    public class Dinamic<T> : IEnumerable<T>
+    public class Dynamic<T> : IEnumerable<T>
     {
         public int Count { get; private set; }
-        public int Capasity { get; private set; }
+        public int Capacity { get; private set; }
         private T[] _list;
-        private readonly IDinamicList<T> _logWriter;
+        private readonly IDynamicList<T> _logWriter;
 
-        public Dinamic(IDinamicList<T> logWriter)
+        public Dynamic(IDynamicList<T> logWriter)
         {
             _logWriter = logWriter;
             _list = new T[0];
             Count = 0;
-            Capasity = 0;
+            Capacity = 0;
         }
 
-        public Dinamic(IEnumerable<T> newList)
+        public Dynamic(IEnumerable<T> newList)
         {
             _list = new T[0];
             Count = 0;
@@ -29,7 +29,7 @@ namespace TestingMPPLab3
             }
         }
 
-        public Dinamic(int count)
+        public Dynamic(int count)
         {
             _list = new T[count];
             Count = count;
@@ -85,7 +85,7 @@ namespace TestingMPPLab3
         {
             Array.Resize(ref _list, 0);
             Count = 0;
-            Capasity = 0;
+            Capacity = 0;
         }
 
         public IEnumerator GetEnumerator()

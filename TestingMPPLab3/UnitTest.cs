@@ -9,42 +9,42 @@ namespace TestingMPPLab3
         [Test]
         public void CreateList()
         {
-            DinamicList<int> intList = new DinamicList<int>();
+            DynamicList<int> intList = new DynamicList<int>();
             Assert.IsNotNull(intList);        
         }
 
         [Test]
         public void CountOfCreatedList()
         {
-            DinamicList<int> intList = new DinamicList<int>();
+            DynamicList<int> intList = new DynamicList<int>();
             Assert.Zero(intList.Count);
         }
 
         [Test]
         public void CapasityOfCreatedList()
         {
-            DinamicList<int> intList = new DinamicList<int>();
-            Assert.Zero(intList.Capasity);
+            DynamicList<int> intList = new DynamicList<int>();
+            Assert.Zero(intList.Capacity);
         }
 
         [Test]
         public void CountAndCapasityAfterInitialization()
         {
-            DinamicList<int> intList = new DinamicList<int>() { 1, 2, 3, 4, 5 };
-            Assert.That(intList.Capasity > intList.Count);
+            DynamicList<int> intList = new DynamicList<int>() { 1, 2, 3, 4, 5 };
+            Assert.That(intList.Capacity > intList.Count);
         }
 
         [Test]
         public void OutOfBoundsExceptionWhenSetElement()
         {
-            DinamicList<int> intList = new DinamicList<int>(9);
+            DynamicList<int> intList = new DynamicList<int>(9);
             Assert.Throws<IndexOutOfRangeException>(() => intList[10] = 10);
         }
 
         [Test]
         public void CheckCountAfterRemoveElement()
         {
-            DinamicList<string> stringList = new DinamicList<string>(9);
+            DynamicList<string> stringList = new DynamicList<string>(9);
             for (int i = 0; i < stringList.Count; i++)
             {
                 stringList[i] = i.ToString();
@@ -56,7 +56,7 @@ namespace TestingMPPLab3
         [Test]
         public void OutOfBoundsExceptionWhenRemoveAtElement()
         {
-            DinamicList<string> stringList = new DinamicList<string>(9);
+            DynamicList<string> stringList = new DynamicList<string>(9);
             for (int i = 0; i < stringList.Count; i++)
             {
                 stringList[i] = i.ToString();
@@ -67,7 +67,7 @@ namespace TestingMPPLab3
         [Test]
         public void OutOfBoundsExceptionWhenRemoveElement()
         {
-            DinamicList<string> stringList = new DinamicList<string>(9);
+            DynamicList<string> stringList = new DynamicList<string>(9);
             for (int i = 0; i < stringList.Count; i++)
             {
                 stringList[i] = i.ToString();
@@ -78,7 +78,7 @@ namespace TestingMPPLab3
         [Test]
         public void CompareCountAfterAdding()
         {
-            DinamicList<string> stringList = new DinamicList<string>(9);
+            DynamicList<string> stringList = new DynamicList<string>(9);
             for (int i = 0; i < stringList.Count; i++)
             {
                 stringList[i] = i.ToString();
@@ -95,19 +95,19 @@ namespace TestingMPPLab3
         [Test]
         public void CompareCapasityAfterRemoving()
         {
-            DinamicList<string> stringList = new DinamicList<string>(9);
+            DynamicList<string> stringList = new DynamicList<string>(9);
             for (int i = 0; i < stringList.Count; i++)
             {
                 stringList[i] = i.ToString();
             }
-            int lastCapasity = stringList.Capasity;
+            int lastCapasity = stringList.Capacity;
 
             stringList.RemoveAt(1);
             stringList.RemoveAt(1);
             stringList.RemoveAt(1);
             stringList.RemoveAt(1);
 
-            Assert.AreEqual(stringList.Capasity, lastCapasity);
+            Assert.AreEqual(stringList.Capacity, lastCapasity);
         }
     }
 }
