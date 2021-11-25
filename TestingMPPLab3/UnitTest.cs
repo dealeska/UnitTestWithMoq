@@ -6,6 +6,11 @@ namespace TestingMPPLab3
 {
     public class UnitTests
     {
+        private static string[] stringList = new string[]
+        {
+            "This", "is", "my", "string", "for", "tests"
+        };
+
         [Test]
         public void CreateList()
         {
@@ -28,10 +33,12 @@ namespace TestingMPPLab3
         }
 
         [Test]
-        public void CountAndCapasityAfterInitialization()
+        public void ClearItemsIntegerValues()
         {
             DynamicList<int> intList = new DynamicList<int>() { 1, 2, 3, 4, 5 };
-            Assert.That(intList.Capacity > intList.Count);
+            intList.Clear();
+
+            Assert.That(intList.Count == 0);
         }
 
         [Test]
@@ -42,7 +49,7 @@ namespace TestingMPPLab3
         }
 
         [Test]
-        public void CheckCountAfterRemoveElement()
+        public void CheckCountAfterRemovingElement()
         {
             DynamicList<string> stringList = new DynamicList<string>(9);
             for (int i = 0; i < stringList.Count; i++)
@@ -93,21 +100,38 @@ namespace TestingMPPLab3
         }
 
         [Test]
-        public void CompareCapasityAfterRemoving()
+        public void CompareCapañityAfterRemoving()
         {
             DynamicList<string> stringList = new DynamicList<string>(9);
             for (int i = 0; i < stringList.Count; i++)
             {
                 stringList[i] = i.ToString();
             }
-            int lastCapasity = stringList.Capacity;
+            int lastCapañity = stringList.Capacity;
 
             stringList.RemoveAt(1);
             stringList.RemoveAt(1);
             stringList.RemoveAt(1);
             stringList.RemoveAt(1);
 
-            Assert.AreEqual(stringList.Capacity, lastCapasity);
+            Assert.AreEqual(stringList.Capacity, lastCapañity);
+        }
+
+        [Test]
+        public void CompareListAfterRemoving()
+        {
+            DynamicList<string> actualList = new DynamicList<string>(stringList);
+            DynamicList<string> expectedList = new DynamicList<string>()
+            {
+                "This", "is", "string", "list"
+            };
+
+            actualList.Remove(actualList[2]);
+            actualList.Add("list");
+            actualList.Remove(actualList[3]);
+            actualList.Remove(actualList[3]);
+
+            Assert.AreEqual(expectedList, actualList);
         }
     }
 }

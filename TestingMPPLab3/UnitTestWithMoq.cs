@@ -17,9 +17,8 @@ namespace TestingMPPLab3
         };
 
         [Test]
-        public void AddElement()
-        {
-            //arrange
+        public void CheckGetEnumerator()
+        {            
             var constant = 10;
             DynamicList<int> dynList = new DynamicList<int>();
             DynamicList<int> dynList2 = new DynamicList<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -30,12 +29,10 @@ namespace TestingMPPLab3
 
             var mock = new Mock<IEnumerable>();
             mock.Setup(x => x.GetEnumerator()).Returns(dynList2.GetEnumerator());
-
-            //act
+            
             int expectedValue = 1;
             foreach (var i in mock.Object)
-            {
-                //assert
+            {                
                 Assert.AreEqual(expectedValue++, i);
             }
         }                   
